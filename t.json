@@ -1,0 +1,322 @@
+{
+  "BASIC_PARAMETERS": {
+    "position": "A1",
+    "start_index": 0,
+    "values": {
+      "H18": { "value": "morgan engineering", "name": "Client" },
+      "H19": { "value": "80 Ton", "name": "Project" },
+      "H20": { "value": "NSW", "name": "place of Delivery" },
+      "H21": { "value": "28529", "name": "Job No." },
+      "H38": { "value": "20", "name": "Top flange thickness" },
+      "H39": { "value": "500", "name": "top flange width" },
+      "H40": { "value": "16", "name": "bottom flange thickness" },
+      "H41": { "value": "500", "name": "bottom flange width" },
+      "H42": { "value": "1200", "name": "web height" },
+      "H43": { "value": "6", "name": "web thickness" },
+      "H44": { "value": "300", "name": "Web spacing" }
+    },
+    "formula": {}
+  },
+  "REFERENCES": {
+    "position": "B50",
+    "start_index": 49,
+    "values": {},
+    "formula": {}
+  },
+  "MATERIALS": {
+    "position": "B59",
+    "start_index": 58,
+    "values": {
+      "M62": { "value": "250", "name": "Yield strength" },
+      "M63": { "value": "200000", "name": "Young's Modulus" },
+      "M64": { "value": "0.3", "name": "Poissons' Ratio" }
+    },
+    "formula": {}
+  },
+  "TECHNICAL DATA": {
+    "position": "B70",
+    "start_index": 69,
+    "values": {
+      "M72": { "value": 50000, "name": "CAPACITY (MAIN HOIST)" },
+      "M73": { "value": 0, "name": "CAPACITY OF AUXILARY HOIST" },
+      "M74": { "value": 18350.0, "name": "SPAN" },
+      "M75": { "value": "3946", "name": "MAIN HOIST + PLATFORM MASS" },
+      "M76": { "value": "1795", "name": "AUXILIARY HOIST + PLATFORM MASS" },
+      "M78": { "value": 5741, "name": "TOTAL" },
+      "M80": { "value": "4", "name": "SPEEDS :  HOISTING (MAIN)" },
+      "M81": { "value": "20", "name": "CROSS TRAVEL (MAIN)" },
+      "M82": { "value": "40", "name": "LONG TRAVEL" },
+      "M84": {
+        "value": "80",
+        "name": "ADDITIONAL DEAD LOAD per beam (railL, diaphragm,walkway)"
+      },
+      "M85": {
+        "value": "80",
+        "name": "ADDITIONAL DEAD LOAD per beam (railL, diaphragm)"
+      },
+      "M86": { "value": "1350", "name": "HOOK APPROACH" },
+      "M88": { "value": "1650", "name": "CRAB/TROLEY WHEEL CENTRES" },
+      "M89": { "value": 825.0, "name": "HOOK DISTANCE" },
+      "M91": { "value": "4", "name": "NUMBER OF CRAB WHEELS" },
+      "M92": { "value": "1650", "name": "END CARRIAGE WHEEL CENTRES" },
+      "M93": { "value": "3000", "name": "CRAB RAIL CENTRES" },
+      "M94": { "value": "1627", "name": "HOOK DISTANCE" },
+      "M95": { "value": "1952", "name": "HOOK Centres" },
+      "M100": {
+        "value": "4",
+        "name": "Number of End carriage wheel per runway"
+      },
+      "M102": {
+        "value": "1400",
+        "name": "WHEEL CENTER BETWEEN TWO END CARRIAGE"
+      },
+      "M103": { "value": "INDOOR", "name": "OPERATING CONDITION" },
+      "M104": { "value": null, "name": "CRANE CLASSIFICATION" }
+    },
+    "formula": {
+      "L106": {
+        "value": "max(I109,I112)",
+        "name": "WIDTH",
+        "calculated_value": 500
+      },
+      "L107": {
+        "value": "H38+H42+H40",
+        "name": "DEPTH",
+        "calculated_value": 1236
+      },
+      "I109": { "value": "H39", "name": "TOP FLANGE", "calculated_value": 500 },
+      "I110": {
+        "value": "H42",
+        "name": "WEB PLATE ON LOAD SIDE",
+        "calculated_value": 1200
+      },
+      "I111": {
+        "value": "H42",
+        "name": "WEB PLATE ON OTHER SIDE",
+        "calculated_value": 1200
+      },
+      "I112": {
+        "value": "H41",
+        "name": "BOTTOM FLANGE",
+        "calculated_value": 500
+      },
+      "I113": {
+        "value": "H44",
+        "name": "DISTANCE BETWEEN WEB PLATES",
+        "calculated_value": 300
+      },
+      "I115": {
+        "value": "H42",
+        "name": "Web depth at girder end",
+        "calculated_value": 1200
+      },
+      "O117": {
+        "value": "(M94)/M93",
+        "name": "alpha",
+        "calculated_value": 0.5423333333333333
+      },
+      "O118": {
+        "value": "(M88-M89)/M88",
+        "name": "alph2",
+        "calculated_value": null
+      }
+    }
+  },
+  "SECTION PROPERTIES": {
+    "position": "B120",
+    "start_index": 119,
+    "values": {},
+    "formula": {
+      "I124": { "value": "H42", "name": "a1", "calculated_value": 1200 },
+      "I127": { "value": "F123", "name": "b2", "calculated_value": 800 },
+      "J133": {
+        "value": "256*L109/sqrt(M62)",
+        "name": "Top flange =",
+        "calculated_value": 323.81723240124205
+      },
+      "J134": {
+        "value": "20*L112",
+        "name": "Bottom flange =",
+        "calculated_value": 320
+      },
+      "J137": {
+        "value": "560*L109/sqrt(M62)",
+        "name": "Top flange =",
+        "calculated_value": 708.3501958777169
+      },
+      "J138": {
+        "value": "60*L112",
+        "name": "Bottom flange =",
+        "calculated_value": 960
+      },
+      "J141": {
+        "value": "560*min(L110,L111)/sqrt(M62)",
+        "name": "in compression =",
+        "calculated_value": null
+      },
+      "J142": {
+        "value": "60*H43",
+        "name": "in tension =",
+        "calculated_value": 360
+      }
+    }
+  },
+  "PROPERTIES ABOUT MAJOR AXIS X-X FOR STRENGTH": {
+    "position": "B146",
+    "start_index": 145,
+    "values": {},
+    "formula": {
+      "E152": {
+        "value": "L149*N149",
+        "name": "Area Top",
+        "calculated_value": 10000
+      },
+      "E153": {
+        "value": "L150*N150",
+        "name": "Area Web1",
+        "calculated_value": 7200
+      },
+      "E154": {
+        "value": "L151*N151",
+        "name": "Area Web 2",
+        "calculated_value": 7200
+      },
+      "E155": {
+        "value": "L152*N152",
+        "name": "Are Bottom",
+        "calculated_value": 8000
+      },
+      "E156": {
+        "value": "sum(E152:F155)",
+        "name": "Total",
+        "calculated_value": null
+      },
+      "E158": { "value": "H38/2", "name": "Yc_top", "calculated_value": 10.0 },
+      "E159": {
+        "value": "N149+N150/2",
+        "name": "Yc_Web1",
+        "calculated_value": 620.0
+      },
+      "E160": {
+        "value": "N149+N151/2",
+        "name": "Yc_Web2",
+        "calculated_value": 620.0
+      },
+      "E161": {
+        "value": "N149+N150+N152/2",
+        "name": "Yc_Bottom",
+        "calculated_value": 1228.0
+      },
+      "E163": {
+        "value": "ABS(F180-E158)",
+        "name": "e_top",
+        "calculated_value": null
+      },
+      "E164": {
+        "value": "ABS(F180-E159)",
+        "name": "e_web1",
+        "calculated_value": null
+      },
+      "E165": {
+        "value": "ABS(F180-E160)",
+        "name": "e_web2",
+        "calculated_value": null
+      },
+      "E166": {
+        "value": "ABS(F180-E161)",
+        "name": "e_bottom",
+        "calculated_value": null
+      },
+      "E168": {
+        "value": "L149*N149**3/12",
+        "name": "I_top",
+        "calculated_value": 333333.3333333333
+      },
+      "E169": {
+        "value": "L150*N150**3/12",
+        "name": "I_Web1",
+        "calculated_value": 864000000.0
+      },
+      "E170": {
+        "value": "L151*N151**3/12",
+        "name": "I_Web2",
+        "calculated_value": 864000000.0
+      },
+      "E171": {
+        "value": "L152*N152**3/12",
+        "name": "I_bottom",
+        "calculated_value": 170666.66666666666
+      },
+      "E172": {
+        "value": "sum(E168:F171)",
+        "name": "Itotal",
+        "calculated_value": null
+      },
+      "E174": {
+        "value": "E152*E163**2",
+        "name": "I_add_top",
+        "calculated_value": null
+      },
+      "E175": {
+        "value": "E153*E164**2",
+        "name": "I_add_web1",
+        "calculated_value": null
+      },
+      "E176": {
+        "value": "E154*E165**2",
+        "name": "I_add_web2",
+        "calculated_value": null
+      },
+      "E177": {
+        "value": "E155*E166**2",
+        "name": "I_bottom",
+        "calculated_value": null
+      },
+      "E178": {
+        "value": "sum(E174:F177)",
+        "name": "I_add_total",
+        "calculated_value": null
+      },
+      "F180": {
+        "value": "(E152*E158+E153*E159+E154*E160+E155*E161)/E156",
+        "name": "Centre of gravity",
+        "calculated_value": null
+      },
+      "F181": {
+        "value": "E172+E178",
+        "name": "Moment of inertia Ixx ",
+        "calculated_value": null
+      },
+      "F182": {
+        "value": "F181/F180",
+        "name": "Zxx top ",
+        "calculated_value": null
+      },
+      "F183": {
+        "value": "F181/(N149+N150+N152-F180)",
+        "name": "Zxx bottom ",
+        "calculated_value": null
+      },
+      "F184": {
+        "value": "sqrt(F181/E156)",
+        "name": "radius of gyration rxx ",
+        "calculated_value": null
+      },
+      "F186": {
+        "value": "min(I124,I127)/180",
+        "name": "fafa",
+        "calculated_value": 4.444444444444445
+      },
+      "F187": {
+        "value": "(F180-N149)*2*sqrt(M62)/3200",
+        "name": "shasha",
+        "calculated_value": null
+      },
+      "F189": {
+        "value": "max(F186,F187)",
+        "name": "shasha1",
+        "calculated_value": null
+      }
+    }
+  }
+}
