@@ -17,7 +17,8 @@ CONVENTIONS = {
     '=': '',
     'SQRT': 'sqrt',
     'SUM': 'sum',
-    '^': '**'
+    '^': '**',
+    'ABS': 'abs'
 }
 
 

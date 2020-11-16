@@ -104,6 +104,11 @@ def initialing_parse_excel(file_path=""):
                        formula_or_param='formula',
                        color_param1=Colors.DRIVED_COLOR.value,
                        color_param2=Colors.FORMULA_COLOR.value)
+
+        # f = open('t.json', 'w')
+        # f.write(json.dumps(data))
+        # f.close()
+        # sys.exit(1)
     except Exception as ex:
         print(ex)
         raise Exception(ex.args)

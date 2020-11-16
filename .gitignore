@@ -1,2 +1,6 @@
 env
 src/__pycache__
+build
+dist
+*.spec
+__pycache__
