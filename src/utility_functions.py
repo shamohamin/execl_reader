@@ -7,7 +7,7 @@ from src.enums_and_constants import (CONVENTIONS,
                                      PARAMETER_PATTERN)
 
 # convert execl functions into python math functions
-
+ 
 
 def converter(val):
     pattern = '|'.join(map(re.escape, CONVENTIONS.keys()))
